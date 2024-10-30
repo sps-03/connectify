@@ -15,8 +15,7 @@ export const SocketContextProvider = ({ children }) => {
 
   useEffect(() => {
     if (authUser) {
-      // update url
-      const socket = io("http://localhost:3000", {
+      const socket = io("https://connectify-6yua.onrender.com/", {
         query: {
           userId: authUser._id,
         },
